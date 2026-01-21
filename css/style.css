@@ -909,6 +909,26 @@ section {
     will-change: transform, opacity;
 }
 
+.fade-up {
+    transform: translateY(20px);
+}
+
+.fade-up.active {
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .slide-in-left {
     transform: translateX(-50px);
 }
