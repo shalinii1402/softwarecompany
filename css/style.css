@@ -989,6 +989,20 @@ section {
         display: block;
     }
 
+    .header-actions {
+        display: flex;
+        /* Ensure these override any hiding if present, though structural changes might be needed in JS/HTML if they aren't inside .nav-links for mobile */
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .navbar .nav-links .header-actions {
+        display: flex;
+        /* Ensure it is visible inside the dropdown */
+    }
+
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -1002,11 +1016,25 @@ section {
 
 @media (max-width: 600px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .hero-content {
+        text-align: center;
+        margin: 0 auto;
     }
 
     .header-actions {
-        display: none;
+        /* We want them visible in the menu, but maybe adjusted */
+        display: flex;
     }
 
     .footer-grid {
@@ -1043,5 +1071,36 @@ section {
 
     .footer-bottom .social-links {
         position: static;
+    }
+
+    .auth-box {
+        padding: 2rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-item {
+        padding-left: 50px;
+    }
+
+    .timeline::after {
+        left: 20px;
+    }
+
+    .timeline-item::after,
+    .left::after,
+    .right::after {
+        left: 10px;
     }
 }
