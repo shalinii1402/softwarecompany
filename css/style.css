@@ -185,6 +185,14 @@ h3 {
     transition: width 0.3s ease;
 }
 
+.nav-item.active {
+    color: var(--primary);
+}
+
+.nav-item.active::after {
+    width: 100%;
+}
+
 .nav-item:hover {
     color: var(--primary);
 }
