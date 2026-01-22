@@ -60,6 +60,14 @@
     font-family: inherit;
 }
 
+body,
+button,
+input,
+textarea,
+select {
+    font-family: var(--font-main);
+}
+
 html {
     scroll-behavior: smooth;
 }
