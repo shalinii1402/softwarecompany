@@ -344,6 +344,8 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    /* Ensures horizontal centering of the container */
     padding-top: var(--header-height);
     background-size: cover;
     background-position: center;
@@ -376,7 +378,9 @@ section {
 }
 
 .hero-content {
-    max-width: 600px;
+    max-width: 800px;
+    /* Increased for better legibility and centering on larger text */
+    width: 100%;
 }
 
 .hero p {
@@ -399,6 +403,13 @@ section {
     border: 1px solid var(--border-color);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card>span:last-child {
+    margin-top: auto;
+    padding-top: 1rem;
 }
 
 .card:hover {
